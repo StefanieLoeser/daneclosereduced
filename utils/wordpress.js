@@ -2,9 +2,7 @@ const BASE_URL =
   "http://wordpress.daneclosereduced.com/daneclr560/wp-json/wp/v2";
 
 export async function getPosts() {
-  const postsRes = await fetch(
-    BASE_URL + "/posts?_embed&per_page=100&order=asc&orderby=title"
-  );
+  const postsRes = await fetch(BASE_URL + "/posts?_embed&per_page=100");
   const posts = await postsRes.json();
   return posts;
 }

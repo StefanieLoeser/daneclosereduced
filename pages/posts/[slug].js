@@ -3,17 +3,22 @@ import Link from "next/link";
 import { getPost, getSlugs } from "../../utils/wordpress";
 
 export default function PostPage({ post }) {
+  console.log(post);
   return (
-    <div className="container pt-5">
-      <h1 className="text-center pb-5">{post.title.rendered}</h1>
-      <div
-        className="card-text pb-5"
-        dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-      ></div>
-      <Link href="/">
-        <a className="btn btn-primary">Back to Home</a>
+    <>
+      <h1>{post.title.rendered}</h1>
+      <img
+        src={
+          post["_embedded"]["wp:featuredmedia"]?.[0]["media_details"]["sizes"][
+            "large"
+          ]["source_url"]
+        }
+        alt={post["_embedded"]["wp:featuredmedia"]?.[0]["alt_text"]}
+      />
+      <Link href="/" className="btn btn-primary">
+        Back to Home
       </Link>
-    </div>
+    </>
   );
 }
 

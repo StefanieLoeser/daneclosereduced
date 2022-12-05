@@ -8,6 +8,7 @@ import Post from "../components/Post";
 export default function Home({ posts }) {
   const jsxPosts = posts.map((post) => {
     const featuredMedia = post["_embedded"]["wp:featuredmedia"]?.[0];
+    console.log(featuredMedia);
     return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
   });
 
@@ -47,10 +48,9 @@ export async function getStaticProps({ params }) {
 }
 
 const BodyContainer = styled.div`
-  background-color: #ff9fea;
-  width: 100%;
+  width: 100vw;
   /* height: 100vh; */
-  padding: 5rem;
+  padding: 3rem;
   align-content: center;
 `;
 
@@ -78,9 +78,10 @@ const TitleRed = styled(TitleDC)`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 90vw;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   justify-items: center;
 
-  gap: 20px;
+  gap: 10px;
 `;
