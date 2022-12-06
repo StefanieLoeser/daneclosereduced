@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styled from "styled-components";
 
 import { getPosts, getMedia } from "../utils/wordpress";
@@ -8,21 +7,11 @@ import Post from "../components/Post";
 export default function Home({ posts }) {
   const jsxPosts = posts.map((post) => {
     const featuredMedia = post["_embedded"]["wp:featuredmedia"]?.[0];
-    console.log(featuredMedia);
     return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
   });
 
   return (
     <>
-      <Head>
-        <title>Dane Close Reduced</title>
-        <meta name="description" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans:wght@300;400&family=Permanent+Marker&family=Rock+Salt&family=Share+Tech&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <BodyContainer>
         <main>
           <TitleDC>dane close</TitleDC>
@@ -49,7 +38,6 @@ export async function getStaticProps({ params }) {
 
 const BodyContainer = styled.div`
   width: 100vw;
-  /* height: 100vh; */
   padding: 3rem;
   align-content: center;
 `;
@@ -63,7 +51,7 @@ const TitleDC = styled.h1`
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
-  font-size: 4.5rem;
+  font-size: 5rem;
   line-height: 95px;
 
   color: #000;
@@ -72,8 +60,9 @@ const TitleDC = styled.h1`
 `;
 
 const TitleRed = styled(TitleDC)`
-  left: 734px;
-  top: 414px;
+  margin-right: 5vw;
+  left: 50vw;
+  top: 56vh;
 `;
 
 const GridContainer = styled.div`
