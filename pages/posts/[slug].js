@@ -47,7 +47,7 @@ const ModelPageWrapper = styled.div`
     font-family: "Gloria Hallelujah", sans-serif;
     font-size: 2rem;
     line-height: 3rem;
-    margin-left: 2rem;
+    margin-left: 2.1rem;
     filter: blur(1px);
   }
   .contentWrapper {

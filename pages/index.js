@@ -66,6 +66,7 @@ const TitleRed = styled(TitleDC)`
 `;
 
 const GridContainer = styled.div`
+  z-index: 1;
   display: grid;
   width: 90vw;
   grid-template-columns: repeat(5, 1fr);
