@@ -45,10 +45,10 @@ const ModelPageWrapper = styled.div`
   margin-bottom: 2rem;
 
   .titleModel {
-    font-family: "Gloria Hallelujah", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 2rem;
     line-height: 3rem;
-    margin-left: 2.1rem;
+    margin-left: 2.5rem;
     filter: blur(1px);
   }
   .contentWrapper {
@@ -57,6 +57,6 @@ const ModelPageWrapper = styled.div`
   }
 
   .linkToHome {
-    margin: 2.1rem;
+    margin: 2.3rem;
   }
 `;
