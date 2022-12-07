@@ -29,11 +29,8 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Dane Close Reduced</title>
           <meta name="description" />
           <link rel="icon" href="/favicon.ico" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
             href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans:wght@300;400&family=Permanent+Marker&family=Rock+Salt&family=Share+Tech&display=swap"
             rel="stylesheet"

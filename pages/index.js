@@ -118,6 +118,7 @@ const TitleRed = styled(TitleDC)`
   }
 
   @media (min-width: 768px) {
+    font-size: 7rem;
     margin-left: 10vh;
     top: 60vh;
     filter: blur(5px);
