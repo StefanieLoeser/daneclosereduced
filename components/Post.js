@@ -39,7 +39,7 @@ const ImageWrapper = styled.div`
 `;
 
 const FeatureImage = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
   object-fit: contain;
 `;

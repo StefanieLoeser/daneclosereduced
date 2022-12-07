@@ -41,7 +41,8 @@ export async function getStaticProps({ params }) {
 
 const ModelPageWrapper = styled.div`
   width: 80vw;
-  margin: 0rem;
+  height: 100%;
+  margin-bottom: 2rem;
 
   .titleModel {
     font-family: "Gloria Hallelujah", sans-serif;
@@ -57,6 +58,5 @@ const ModelPageWrapper = styled.div`
 
   .linkToHome {
     margin: 2.1rem;
-    line-height: 2rem;
   }
 `;
