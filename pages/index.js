@@ -58,7 +58,7 @@ const TitleDC = styled.h1`
   margin-left: 20vw;
   top: 20vh;
 
-  font-family: "Gloria Hallelujah", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
