@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["wordpress.daneclosereduced.com"],
+    domains: ["wordpress.daneclosereduced.com/daneCloseR"],
   },
 };
 module.exports = nextConfig;

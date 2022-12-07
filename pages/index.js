@@ -4,11 +4,42 @@ import { getPosts, getMedia } from "../utils/wordpress";
 
 import Post from "../components/Post";
 
+// import models from "../data.json";
+
+// async function fetcherFunc(url) {
+//   const res = await fetch(url);
+//   return res.json();
+// }
+
+// export function getAllModels() {
+//   const allModels = models.map((models) => {
+//     return { ...models };
+//   });
+//   return allModels;
+// }
+
 export default function Home({ posts }) {
+  //   const modelGrid = allModels.map((model) => {
+  //     return <img src={model.image.mediaDetails.sizes[0].sourceUrl} />;
+  //   });
+
   const jsxPosts = posts.map((post) => {
     const featuredMedia = post["_embedded"]["wp:featuredmedia"]?.[0];
     return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
   });
+
+  //   return (
+  //     <>
+  //       <BodyContainer>
+  //         <main>
+  //           <TitleDC>dane close</TitleDC>
+  //           <TitleRed>reduced</TitleRed>
+  //           <GridContainer>{modelGrid}</GridContainer>
+  //           {/* <GridContainer>{jsxPosts}</GridContainer> */}
+  //         </main>
+  //       </BodyContainer>
+  //     </>
+  //   );
 
   return (
     <>
