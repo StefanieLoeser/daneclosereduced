@@ -38,21 +38,31 @@ export async function getStaticProps({ params }) {
 
 const BodyContainer = styled.div`
   width: 100vw;
+`;
+
+const GridContainer = styled.div`
+  z-index: 1;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
   padding: 3rem;
-  align-content: center;
+  overflow: scroll;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-self: center;
+  gap: 3rem;
 `;
 
 const TitleDC = styled.h1`
   position: absolute;
-  left: 20vw;
-  top: 25vh;
+  margin-left: 20vw;
+  top: 20vh;
 
   font-family: "Gloria Hallelujah", sans-serif;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
-  font-size: 5rem;
-  line-height: 95px;
+  font-size: 5.5rem;
 
   color: #000;
 
@@ -61,16 +71,6 @@ const TitleDC = styled.h1`
 
 const TitleRed = styled(TitleDC)`
   margin-right: 5vw;
-  left: 50vw;
+  right: 20vw;
   top: 56vh;
-`;
-
-const GridContainer = styled.div`
-  display: grid;
-  width: 90vw;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  justify-items: center;
-
-  gap: 10px;
 `;
