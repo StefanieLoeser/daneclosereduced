@@ -59,6 +59,7 @@ const ModelPageWrapper = styled.div`
 
   .titleModel {
     font-family: "Open Sans", sans-serif;
+    /* font-family: "Cousine", monospace; */
     width: 100%;
 
     line-height: 3rem;

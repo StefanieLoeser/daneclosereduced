@@ -78,8 +78,9 @@ const TitleDC = styled.h1`
   margin-left: 15vw;
   top: 17vh;
 
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Cousine", monospace;
+  /* font-family: "Share Tech", sans-serif; */
   font-style: normal;
   font-weight: 400;
 
@@ -102,11 +103,13 @@ const TitleDC = styled.h1`
 
   @media (min-width: 1024px) {
     font-size: 7rem;
+    filter: blur(10px);
   }
 
   @media (orientation: landscape) {
     margin-left: 10vw;
     top: 10vh;
+    filter: blur(5px);
   }
 `;
 
