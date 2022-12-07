@@ -38,7 +38,6 @@ export async function getStaticProps({ params }) {
 
 const BodyContainer = styled.div`
   width: 100vw;
-  /* padding: 3rem; */
 `;
 
 const GridContainer = styled.div`
@@ -46,7 +45,6 @@ const GridContainer = styled.div`
   display: grid;
   width: 100vw;
   height: 100vh;
-  /* margin: 3rem; */
   padding: 3rem;
   overflow: scroll;
   grid-template-columns: repeat(5, 1fr);

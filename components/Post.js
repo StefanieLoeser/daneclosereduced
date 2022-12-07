@@ -35,6 +35,7 @@ export default function Post({ post, featuredMedia }) {
 const ImageWrapper = styled.div`
   position: relative;
   justify-content: center;
+  cursor: pointer;
   /* width: 30vw; */
 `;
 
