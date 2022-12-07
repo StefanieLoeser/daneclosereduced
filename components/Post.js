@@ -5,7 +5,6 @@ import Image from "next/legacy/image";
 //for more info, check out these docs https://nextjs.org/docs/basic-features/image-optimization
 
 export default function Post({ post, featuredMedia }) {
-  console.log(featuredMedia === null ? featuredMedia : "");
   return (
     <Link href={`/posts/${post.slug}`} legacyBehavior>
       <ImageWrapper>
@@ -20,9 +19,7 @@ export default function Post({ post, featuredMedia }) {
           //   />
           <FeatureImage
             src={
-              featuredMedia["media_details"]["sizes"]["medium_large"][
-                "source_url"
-              ]
+              featuredMedia["media_details"]["sizes"]["medium"]["source_url"]
             }
             alt={featuredMedia["alt_text"]}
           />
@@ -36,11 +33,11 @@ const ImageWrapper = styled.div`
   position: relative;
   justify-content: center;
   cursor: pointer;
-  /* width: 30vw; */
 `;
 
 const FeatureImage = styled.img`
   width: 100%;
   height: auto;
   object-fit: contain;
+  border-radius: 2px;
 `;

@@ -42,35 +42,100 @@ const BodyContainer = styled.div`
 
 const GridContainer = styled.div`
   z-index: 1;
-  display: grid;
   width: 100vw;
   height: 100vh;
   padding: 3rem;
   overflow: scroll;
-  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   justify-self: center;
-  gap: 3rem;
+
+  /* grid-template-columns: repeat(5, 1fr); */
+
+  @media (min-width: 320px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (min-width: 425px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  @media (min-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
 
 const TitleDC = styled.h1`
   position: absolute;
-  margin-left: 20vw;
-  top: 20vh;
+  margin-left: 15vw;
+  top: 17vh;
 
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Cousine", monospace;
+  /* font-family: "Share Tech", sans-serif; */
   font-style: normal;
   font-weight: 400;
-  font-size: 5.5rem;
 
   color: #000;
 
-  filter: blur(4px);
+  @media (min-width: 320px) {
+    font-size: 4rem;
+    margin-right: 10vw;
+    text-align: right;
+    top: 10vh;
+    filter: blur(4px);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 6rem;
+    margin-left: 10vw;
+    top: 15vh;
+    filter: blur(5px);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 7rem;
+    filter: blur(10px);
+  }
+
+  @media (orientation: landscape) {
+    margin-left: 10vw;
+    top: 10vh;
+    filter: blur(5px);
+  }
 `;
 
 const TitleRed = styled(TitleDC)`
-  margin-right: 5vw;
-  right: 20vw;
-  top: 56vh;
+  @media (min-width: 320px) {
+    font-size: 4rem;
+    top: 60vh;
+    filter: blur(4px);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 7rem;
+    margin-left: 10vh;
+    top: 60vh;
+    filter: blur(5px);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 7rem;
+    margin-right: 5vw;
+    right: 17vw;
+    top: 56vh;
+  }
+
+  @media (orientation: landscape) {
+    margin-left: 50vh;
+    top: 50vh;
+  }
 `;
