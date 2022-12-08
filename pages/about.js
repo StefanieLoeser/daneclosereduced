@@ -4,11 +4,13 @@ import BackHome from "../components/BackHome";
 
 export default function About() {
   return (
-    <AboutWrapper>
-      <h1>about</h1>
-      <p>dane close reduced lorem ipsum</p>
+    <>
+      <AboutWrapper>
+        <h1>about</h1>
+        <p>dane close reduced lorem ipsum</p>
+      </AboutWrapper>
       <BackHome />
-    </AboutWrapper>
+    </>
   );
 }
 

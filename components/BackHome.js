@@ -11,12 +11,13 @@ export default function BackHome() {
 
 const LinkToHome = styled.a`
   margin: 2.5rem 2rem;
+  cursor: pointer;
 
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     font-size: 1.8rem;
   }
 
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
+  @media (max-width: 1024px) {
+    font-size: 1.4rem;
   }
 `;

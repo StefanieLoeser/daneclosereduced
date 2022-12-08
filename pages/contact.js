@@ -3,26 +3,28 @@ import BackHome from "../components/BackHome";
 
 export default function Contact() {
   return (
-    <ContactPageWrapper>
-      <h1>Contact</h1>
-      <form action="/send-data-here" method="post">
-        {/* <label for="first">First name:</label> */}
-        <input type="text" id="first" name="first" placeholder="first name" />
-        {/* <label for="last">Last name:</label> */}
-        <input type="text" id="last" name="last" placeholder="last name" />
-        {/* <label for="email">E-Mail:</label> */}
-        <input type="text" id="email" name="email" placeholder="email" />
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Say hi!"
-          rows="8"
-          cols="5"
-        />
-        <button type="submit">Submit</button>
-      </form>
+    <>
+      <ContactPageWrapper>
+        <h1>Contact</h1>
+        <form action="/send-data-here" method="post">
+          {/* <label for="first">First name:</label> */}
+          <input type="text" id="first" name="first" placeholder="first name" />
+          {/* <label for="last">Last name:</label> */}
+          <input type="text" id="last" name="last" placeholder="last name" />
+          {/* <label for="email">E-Mail:</label> */}
+          <input type="text" id="email" name="email" placeholder="email" />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Say hi!"
+            rows="8"
+            cols="5"
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </ContactPageWrapper>
       <BackHome />
-    </ContactPageWrapper>
+    </>
   );
 }
 
