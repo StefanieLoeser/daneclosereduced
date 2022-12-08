@@ -1,33 +1,21 @@
 import Link from "next/link";
 import styled from "styled-components";
+import BackHome from "../components/BackHome";
 
 export default function About() {
   return (
     <AboutWrapper>
       <h1>about</h1>
       <p>dane close reduced lorem ipsum</p>
-      <Link href="/" className="linkToHome">
-        ‹ back to home
-      </Link>
+      <BackHome />
     </AboutWrapper>
   );
 }
 
 const AboutWrapper = styled.div`
-  .linkToHome {
-    margin: 2.3rem;
-    position: sticky;
-
-    @media (min-width: 320px) {
-      font-size: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 1.2rem;
-    }
-  }
+  max-width: 100%;
+  height: fit-content;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  position: relative;
 `;

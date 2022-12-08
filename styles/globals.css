@@ -4,8 +4,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  font-family: "Red Hat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Red Hat", sans-serif;
 }
 
 a {
@@ -15,6 +14,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Red", sans-serif;
 }
 /* 
 @media (prefers-color-scheme: dark) {
