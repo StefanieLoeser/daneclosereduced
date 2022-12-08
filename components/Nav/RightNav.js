@@ -1,27 +1,49 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 
-export default function RightNav({ posts }) {
-  const [showModelList, setShowModelList] = useState(false);
+export default function RightNav({ posts, open, onSetOpen }) {
+  //   const [showModels, setShowModels] = useState(false);
 
   return (
-    <NavListRight>
-      <li>
+    <NavListRight
+      open={open}
+      open={open}
+      onClick={() => {
+        onSetOpen(!open);
+      }}
+    >
+      <li
+        open={open}
+        onClick={() => {
+          onSetOpen(!open);
+        }}
+      >
         <Link href="/">Home</Link>
       </li>
-      <li>
+      <li
+        open={open}
+        onClick={() => {
+          onSetOpen(!open);
+        }}
+      >
         <Link href="/about">About</Link>
       </li>
-      <li>
+      <li
+        open={open}
+        onClick={() => {
+          onSetOpen(!open);
+        }}
+      >
         <Link href="/contact">Contact</Link>
       </li>
-      <li
-        showModelList={showModelList}
-        onClick={() => setShowModelList(!showModelList)}
+      {/* <li
+        className=""
+        showModels={showModels}
+        onClick={() => setShowModels(!showModels)}
       >
         Models
-        {showModelList ? (
+        {showModels ? (
           <ul className="modelList">
             {posts.map((post) => {
               return (
@@ -34,7 +56,7 @@ export default function RightNav({ posts }) {
             })}
           </ul>
         ) : null}
-      </li>
+      </li> */}
     </NavListRight>
   );
 }
@@ -51,24 +73,52 @@ const NavListRight = styled.ul`
     cursor: pointer;
   }
 
-  .modelList {
-    display: ${({ showModelList }) => (showModelList ? "none" : "block")};
+  /* .modelList {
+    display: ${({ showModelList }) => (showModelList ? "none" : "inline")};
+    list-style: none;
+    /* position: relative;
+    left: -7px;
+    margin-left: 0;
+    padding: 10px 0;
+    back 
   }
+
+  .modelListItem {
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  .modelListItem:hover {
+    color: darkgoldenrod;
+  } */
 
   @media (max-width: 768px) {
     z-index: 10;
-    display: flex;
     flex-flow: column nowrap;
     background-color: #f3fffb;
+    opacity: 0.8;
     position: fixed;
-    top: 0;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+    top: -15px;
     right: 0;
     height: 100vh;
-    width: 150px;
+    width: 250px;
     padding-top: 3.5rem;
+    transition: transform 0.3s;
 
-    .modelListItem {
-      padding: 0.5rem;
+    li {
+      font-size: 1.5rem;
     }
+
+    /* .modelListItem {
+      padding: 0.6rem;
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    .modelListItem:hover {
+      color: darkgoldenrod;
+    } */
   }
 `;
