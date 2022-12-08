@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { getPosts, getMedia } from "../utils/wordpress";
 
 import Post from "../components/Post";
+import Navbar from "../components/Nav/Navbar";
 
 export default function Home({ posts }) {
   const jsxPosts = posts.map((post) => {
@@ -13,6 +14,7 @@ export default function Home({ posts }) {
   return (
     <>
       <BodyContainer>
+        <Navbar posts={posts} />
         <main>
           <TitleDC>dane close</TitleDC>
           <TitleRed>reduced</TitleRed>
@@ -78,9 +80,8 @@ const TitleDC = styled.h1`
   margin-left: 15vw;
   top: 17vh;
 
-  /* font-family: "Open Sans", sans-serif; */
-  font-family: "Cousine", monospace;
-  /* font-family: "Share Tech", sans-serif; */
+  font-family: "Open Sans", sans-serif;
+  /* font-family: "Cousine", monospace; */
   font-style: normal;
   font-weight: 400;
 
