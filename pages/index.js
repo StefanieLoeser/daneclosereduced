@@ -14,7 +14,7 @@ export default function Home({ posts }) {
   return (
     <>
       <BodyContainer>
-        <Navbar posts={posts} />
+        <Navbar />
         <main>
           <TitleDC>dane close</TitleDC>
           <TitleRed>reduced</TitleRed>

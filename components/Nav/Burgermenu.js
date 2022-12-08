@@ -22,8 +22,8 @@ const StyledBurger = styled.div`
   width: 1.8rem;
   height: 2rem;
   position: fixed;
-  top: 12px;
-  right: 16px;
+  top: 15px;
+  right: 18px;
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
@@ -51,7 +51,7 @@ const StyledBurger = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (direction: portrait) {
     display: none;
     transition: transform 0.3s ease-in-out;
   }

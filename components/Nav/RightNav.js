@@ -53,8 +53,17 @@ const NavListRight = styled.ul`
   transition: all 0.3s linear;
 
   li {
-    padding: 18px 10px;
+    padding: 13px 16px;
+    margin: 4px 10px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    /* border: 3px solid #f3fffb;
+    border-radius: 3px; */
     cursor: pointer;
+  }
+
+  li:hover {
+    filter: blur(1px);
   }
 
   /* .modelList {

@@ -17,7 +17,7 @@ export default function Contact() {
             id="message"
             name="message"
             placeholder="Say hi!"
-            rows="8"
+            rows="5"
             cols="5"
           />
           <button type="submit">Submit</button>
@@ -29,7 +29,7 @@ export default function Contact() {
 }
 
 const ContactPageWrapper = styled.div`
-  padding: 2.5rem;
+  margin: 2.5rem;
   display: flex;
   flex-flow: column nowrap;
   max-width: 70vh;
@@ -45,20 +45,24 @@ const ContactPageWrapper = styled.div`
   }
 
   input {
-    font-size: 1.2rem;
-    padding: 0.5rem;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
   }
 
   textarea {
     border: none;
     font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 1rem;
   }
 
   button {
     height: 3rem;
     border: none;
-    font-size: 1.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #e8e8e8;
   }
 `;

@@ -20,6 +20,7 @@ a {
 h1 {
   font-family: "Open Sans", sans-serif;
   font-family: "Red", sans-serif;
+  filter: blur(1px);
 }
 /* 
 @media (prefers-color-scheme: dark) {
