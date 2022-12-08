@@ -8,7 +8,6 @@ export default function RightNav({ posts, open, onSetOpen }) {
   return (
     <NavListRight
       open={open}
-      open={open}
       onClick={() => {
         onSetOpen(!open);
       }}
