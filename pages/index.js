@@ -104,7 +104,7 @@ const TitleDC = styled.h1`
 
   @media (min-width: 1024px) {
     font-size: 7rem;
-    filter: blur(10px);
+    filter: blur(5px);
   }
 
   @media (orientation: landscape) {
