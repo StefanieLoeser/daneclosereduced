@@ -51,7 +51,7 @@ const StyledBurger = styled.div`
     }
   }
 
-  @media (min-width: 768px) and (direction: portrait) {
+  @media (min-width: 768px) {
     display: none;
     transition: transform 0.3s ease-in-out;
   }
