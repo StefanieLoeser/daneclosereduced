@@ -12,28 +12,13 @@ export default function RightNav({ posts, open, onSetOpen }) {
         onSetOpen(!open);
       }}
     >
-      <li
-        open={open}
-        onClick={() => {
-          onSetOpen(!open);
-        }}
-      >
+      <li>
         <Link href="/">Home</Link>
       </li>
-      <li
-        open={open}
-        onClick={() => {
-          onSetOpen(!open);
-        }}
-      >
+      <li>
         <Link href="/about">About</Link>
       </li>
-      <li
-        open={open}
-        onClick={() => {
-          onSetOpen(!open);
-        }}
-      >
+      <li>
         <Link href="/contact">Contact</Link>
       </li>
       {/* <li

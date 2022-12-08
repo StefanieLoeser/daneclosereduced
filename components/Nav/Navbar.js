@@ -11,7 +11,7 @@ export default function Navbar({ posts }) {
 
 const Nav = styled.nav`
   width: 100%;
-  heigth: 0px;
+  height: 0px;
   border-bottom: 0px;
 
   padding-right: 40px;
