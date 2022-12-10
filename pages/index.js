@@ -14,7 +14,7 @@ export default function Home({ posts }) {
   return (
     <>
       <BodyContainer>
-        <Navbar posts={posts} />
+        <Navbar />
         <main>
           <TitleDC>dane close</TitleDC>
           <TitleRed>reduced</TitleRed>
@@ -78,11 +78,7 @@ const GridContainer = styled.div`
 const TitleDC = styled.h1`
   position: absolute;
   margin-left: 15vw;
-  top: 17vh;
-
-  font-family: "Open Sans", sans-serif;
-  /* font-family: "Cousine", monospace; */
-  font-style: normal;
+  top: 17vh;s
   font-weight: 400;
 
   color: #000;
@@ -104,7 +100,7 @@ const TitleDC = styled.h1`
 
   @media (min-width: 1024px) {
     font-size: 7rem;
-    filter: blur(10px);
+    filter: blur(5px);
   }
 
   @media (orientation: landscape) {

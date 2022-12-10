@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import BackHome from "../../components/BackHome";
 
 import { getPost, getSlugs } from "../../utils/wordpress";
 
@@ -11,9 +12,7 @@ export default function PostPage({ post }) {
         className="contentWrapper"
         dangerouslySetInnerHTML={{ __html: post.content.rendered }}
       ></div>
-      <Link href="/" className="linkToHome">
-        ‹ back to home
-      </Link>
+      <BackHome />
     </ModelPageWrapper>
   );
 }
@@ -39,8 +38,7 @@ export async function getStaticProps({ params }) {
 }
 
 const ModelPageWrapper = styled.div`
-  max-width: fit-content;
-  height: fit-content;
+  max-width: 100vw;
   margin-bottom: 2rem;
   position: relative;
 
@@ -48,19 +46,8 @@ const ModelPageWrapper = styled.div`
     max-width: 80vw;
   }
 
-  @media (min-width: 768px) {
-  }
-
-  @media (min-width: 1024px) {
-  }
-
-  @media (orientation: landscape) {
-  }
-
   .titleModel {
-    font-family: "Open Sans", sans-serif;
-    /* font-family: "Cousine", monospace; */
-    width: 100%;
+    width: fit-content;
 
     line-height: 3rem;
     margin-left: 2.5rem;
@@ -68,15 +55,18 @@ const ModelPageWrapper = styled.div`
 
     @media (min-width: 320px) {
       font-size: 3rem;
+      filter: blur(2px);
     }
 
     @media (min-width: 768px) {
       font-size: 1.8rem;
+      filter: blur(2px);
     }
 
     @media (min-width: 768px) {
       font-size: 2rem;
       width: 100%;
+      filter: blur(2px);
     }
   }
   .contentWrapper {
@@ -88,23 +78,6 @@ const ModelPageWrapper = styled.div`
 
     @media (min-width: 768px) {
       left: 0rem;
-    }
-  }
-
-  .linkToHome {
-    margin: 2.3rem;
-    position: sticky;
-
-    @media (min-width: 320px) {
-      font-size: 2rem;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 2rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 1.2rem;
     }
   }
 `;
