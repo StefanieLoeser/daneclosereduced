@@ -22,7 +22,6 @@ const Nav = styled.nav`
 
   @media (min-width: 768px) {
     z-index: 2;
-    /* border-bottom: 4px dotted #fff; */
     height: 60px;
   }
 `;

@@ -38,8 +38,7 @@ export async function getStaticProps({ params }) {
 }
 
 const ModelPageWrapper = styled.div`
-  max-width: 100%;
-  height: fit-content;
+  max-width: 100vw;
   margin-bottom: 2rem;
   position: relative;
 
@@ -48,7 +47,7 @@ const ModelPageWrapper = styled.div`
   }
 
   .titleModel {
-    width: 100%;
+    width: fit-content;
 
     line-height: 3rem;
     margin-left: 2.5rem;

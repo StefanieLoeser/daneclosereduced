@@ -15,9 +15,9 @@ export default function RightNav({ posts, open, onSetOpen }) {
       <li>
         <Link href="/">Home</Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/about">About</Link>
-      </li>
+      </li> */}
       <li>
         <Link href="/contact">Contact</Link>
       </li>

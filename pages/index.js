@@ -78,11 +78,7 @@ const GridContainer = styled.div`
 const TitleDC = styled.h1`
   position: absolute;
   margin-left: 15vw;
-  top: 17vh;
-
-  font-family: "Open Sans", sans-serif;
-  /* font-family: "Cousine", monospace; */
-  font-style: normal;
+  top: 17vh;s
   font-weight: 400;
 
   color: #000;
