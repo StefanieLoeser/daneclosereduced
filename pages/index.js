@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import { getPosts, getMedia } from "../utils/wordpress";
+import { getPosts, getPages } from "../utils/wordpress";
 
 import Post from "../components/Post";
 import Navbar from "../components/Nav/Navbar";
 
-export default function Home({ posts }) {
+export default function Home({ posts, pages }) {
   const jsxPosts = posts.map((post) => {
     const featuredMedia = post["_embedded"]["wp:featuredmedia"]?.[0];
     return <Post post={post} featuredMedia={featuredMedia} key={post.id} />;
@@ -14,7 +14,7 @@ export default function Home({ posts }) {
   return (
     <>
       <BodyContainer>
-        <Navbar />
+        <Navbar pages={pages} />
         <main>
           <TitleDC>dane close</TitleDC>
           <TitleRed>reduced</TitleRed>
@@ -27,12 +27,12 @@ export default function Home({ posts }) {
 
 export async function getStaticProps({ params }) {
   const posts = await getPosts();
-  const media = await getMedia();
+  const pages = await getPages();
 
   return {
     props: {
       posts,
-      media,
+      pages,
     },
     revalidate: 10, // In seconds
   };

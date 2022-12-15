@@ -2,8 +2,16 @@ import styled from "styled-components";
 import Link from "next/link";
 // import { useState } from "react";
 
-export default function RightNav({ posts, open, onSetOpen }) {
+export default function RightNav({ posts, open, onSetOpen, pages }) {
   //   const [showModels, setShowModels] = useState(false);
+
+  const jsxPages = pages.map((page) => {
+    return (
+      <li>
+        <Link href={`/${page.slug}`}>{page["title"]?.["rendered"]}</Link>
+      </li>
+    );
+  });
 
   return (
     <NavListRight
@@ -15,9 +23,7 @@ export default function RightNav({ posts, open, onSetOpen }) {
       <li>
         <Link href="/">Home</Link>
       </li>
-      {/* <li>
-        <Link href="/about">About</Link>
-      </li> */}
+      {jsxPages}
       <li>
         <Link href="/contact">Contact</Link>
       </li>
