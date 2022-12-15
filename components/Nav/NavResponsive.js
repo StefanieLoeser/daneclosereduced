@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 // import { useState } from "react";
 
-export default function RightNav({ posts, open, onSetOpen, pages }) {
+export default function NavResponsive({ posts, open, onSetOpen, pages }) {
   //   const [showModels, setShowModels] = useState(false);
 
   const jsxPages = pages.map((page) => {
@@ -14,7 +14,7 @@ export default function RightNav({ posts, open, onSetOpen, pages }) {
   });
 
   return (
-    <NavListRight
+    <NavMenu
       open={open}
       onClick={() => {
         onSetOpen(!open);
@@ -47,11 +47,11 @@ export default function RightNav({ posts, open, onSetOpen, pages }) {
           </ul>
         ) : null}
       </li> */}
-    </NavListRight>
+    </NavMenu>
   );
 }
 
-const NavListRight = styled.ul`
+const NavMenu = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;

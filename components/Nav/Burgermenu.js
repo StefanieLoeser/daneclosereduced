@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import RightNav from "./RightNav";
+import NavResponsive from "./NavResponsive";
 
 export default function Burger({ posts, pages }) {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,12 @@ export default function Burger({ posts, pages }) {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} posts={posts} onSetOpen={setOpen} pages={pages} />
+      <NavResponsive
+        open={open}
+        posts={posts}
+        onSetOpen={setOpen}
+        pages={pages}
+      />
     </>
   );
 }
