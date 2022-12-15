@@ -7,7 +7,7 @@ export default function NavResponsive({ posts, open, onSetOpen, pages }) {
 
   const jsxPages = pages.map((page) => {
     return (
-      <li>
+      <li key={page.slug}>
         <Link href={`/${page.slug}`}>{page["title"]?.["rendered"]}</Link>
       </li>
     );
