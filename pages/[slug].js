@@ -53,36 +53,22 @@ const PageWrapper = styled.div`
     line-height: 3rem;
     font-size: 2rem;
     filter: blur(1px);
-
-    @media (min-width: 767px) {
-      font-size: 2.2rem;
-      filter: blur(2px);
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 2rem;
-      filter: blur(2px);
-    }
   }
   .contentWrapper {
-    max-width: 70vw;
     position: relative;
-    /* padding-right: 5vw;
-    margin: 0;
-    left: 2.5rem; */
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 
     @media (min-width: 320px) {
-      font-size: 1.1rem;
-      line-height: 1.2rem;
-      width: ;
+      max-width: 70vw;
     }
 
     @media (min-width: 767px) {
-      font-size: 1.5rem;
+      max-width: 55vw;
     }
 
     @media (min-width: 1024px) {
-      font-size: 2rem;
+      max-width: 500px;
     }
   }
 `;
