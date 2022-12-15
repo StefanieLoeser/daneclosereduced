@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import Burger from "./Burgermenu";
 
-export default function Navbar({ posts }) {
+export default function Navbar({ posts, pages }) {
   return (
-    <Nav>
-      <Burger posts={posts} />
-    </Nav>
+    <>
+      <Nav>
+        <Burger posts={posts} pages={pages} />
+      </Nav>
+    </>
   );
 }
 

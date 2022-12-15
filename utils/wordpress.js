@@ -14,17 +14,17 @@ export async function getPost(slug) {
   return post;
 }
 
-export async function getMedias() {
-  const mediasRes = await fetch(BASE_URL + "/media");
-  const medias = await mediasRes.json();
-  return medias;
+export async function getPages() {
+  const pagesRes = await fetch(BASE_URL + "/pages");
+  const pages = await pagesRes.json();
+  return pages;
 }
 
-export async function getMedia(slug) {
-  const medias = await getMedias();
-  const mediaArray = medias.filter((media) => media.slug == slug);
-  const media = mediaArray.length > 0 ? mediaArray[0] : "null";
-  return media;
+export async function getPage(slug) {
+  const pages = await getPages();
+  const pagesArray = pages.filter((page) => page.slug == slug);
+  const page = pagesArray.length > 0 ? pagesArray[0] : "null";
+  return page;
 }
 
 export async function getSlugs(type) {
@@ -33,8 +33,8 @@ export async function getSlugs(type) {
     case "posts":
       elements = await getPosts();
       break;
-    case "media":
-      elements = await getMedias();
+    case "page":
+      elements = await getPages();
       break;
   }
   const elementsIds = elements.map((element) => {
