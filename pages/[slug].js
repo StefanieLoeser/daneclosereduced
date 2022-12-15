@@ -49,37 +49,40 @@ const PageWrapper = styled.div`
   }
 
   .titleModel {
-    width: fit-content;
-
+    width: 100%;
     line-height: 3rem;
-
+    font-size: 2rem;
     filter: blur(1px);
 
-    @media (min-width: 320px) {
-      font-size: 3rem;
+    @media (min-width: 767px) {
+      font-size: 2.2rem;
       filter: blur(2px);
     }
 
-    @media (min-width: 768px) {
-      font-size: 1.8rem;
-      filter: blur(2px);
-    }
-
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       font-size: 2rem;
-      width: 100%;
       filter: blur(2px);
     }
   }
   .contentWrapper {
-    max-width: 60vw;
+    max-width: 70vw;
     position: relative;
     /* padding-right: 5vw;
     margin: 0;
     left: 2.5rem; */
 
-    @media (min-width: 768px) {
-      left: 0rem;
+    @media (min-width: 320px) {
+      font-size: 1.1rem;
+      line-height: 1.2rem;
+      width: ;
+    }
+
+    @media (min-width: 767px) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
     }
   }
 `;
