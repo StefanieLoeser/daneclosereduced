@@ -1,5 +1,5 @@
-const BASE_URL =
-  "https://wordpress.daneclosereduced.com/daneCloseR/wp-json/wp/v2";
+const BASE_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+console.log("Url", BASE_URL);
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + "/posts?_embed&per_page=100");
