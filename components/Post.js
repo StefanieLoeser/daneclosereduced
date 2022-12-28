@@ -19,7 +19,9 @@ export default function Post({ post, featuredMedia }) {
           //   />
           <FeatureImage
             src={
-              featuredMedia["media_details"]["sizes"]["medium"]["source_url"]
+              featuredMedia["media_details"]?.["sizes"]?.["medium"][
+                "source_url"
+              ]
             }
             alt={featuredMedia["alt_text"]}
           />
