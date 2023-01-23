@@ -1,5 +1,5 @@
 const BASE_URL =
-  "https://wordpress.daneclosereduced.com/daneCloseR/wp-json/wp/v2";
+  "https://wordpress.daneclosereduced.com/wordpress/wp-json/wp/v2";
 
 export async function getPosts() {
   const postsRes = await fetch(BASE_URL + "/posts?_embed&per_page=100");
