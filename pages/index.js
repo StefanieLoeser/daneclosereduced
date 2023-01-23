@@ -51,8 +51,6 @@ const GridContainer = styled.div`
   align-items: center;
   justify-self: center;
 
-  /* grid-template-columns: repeat(5, 1fr); */
-
   @media (min-width: 320px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -72,6 +70,11 @@ const GridContainer = styled.div`
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+  }
+
+  @media (min-width: 1500px) {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
   }
 `;
 
