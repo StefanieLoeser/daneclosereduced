@@ -81,7 +81,7 @@ const GridContainer = styled.div`
 const TitleDC = styled.h1`
   position: absolute;
   margin-left: 15vw;
-  top: 17vh;s
+  top: 17vh;
   font-weight: 400;
 
   color: #000;

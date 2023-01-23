@@ -95,14 +95,15 @@ const NavMenu = styled.ul`
   @media (max-width: 768px) {
     z-index: 10;
     flex-flow: column nowrap;
-    background-color: #f3fffb;
-    opacity: 0.8;
+    background-color: #fff200;
+    backdrop-filter: blur(50px);
+    opacity: 0.7;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: -15px;
     right: 0;
     height: 100vh;
-    width: 250px;
+    width: 220px;
     padding-top: 3.5rem;
     transition: transform 0.3s;
 
